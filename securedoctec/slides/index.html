@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureDocTec | Apresentação</title>
+    <meta
+      name="description"
+      content="SecureDocTec — apresentação sobre criptografia para documentos acadêmicos da Fatec Mogi das Cruzes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="deck-shell">
+      <header class="deck-header">
+        <div class="brand-block">
+          <img src="../proto/assets/logo_fatec_branco.svg" alt="Logo da FATEC" class="brand-logo" />
+          <img src="../proto/assets/cps_logo_branco.svg" alt="Logo do Centro Paula Souza" class="brand-logo secondary-brand" />
+          <div>
+            <div class="eyebrow">FATEC Mogi das Cruzes</div>
+            <div class="brand-name">SecureDocTec</div>
+          </div>
+        </div>
+        <div class="deck-status">
+          <span class="deck-pill">Jornada do usuário</span>
+          <span id="slide-indicator">Slide 1 / 9</span>
+        </div>
+      </header>
+
+      <main class="deck" aria-live="polite">
+        <section class="slide active slide--hero">
+          <div class="slide-content hero-grid">
+            <div>
+              <span class="kicker">Projeto de segurança da informação</span>
+              <h1>SecureDocTec</h1>
+              <p class="lead">
+                Solução de segurança criptográfica para documentos acadêmicos da Fatec Mogi das Cruzes.
+              </p>
+              <p>
+                O objetivo é proteger a confidencialidade, a integridade e a autenticidade de historicos,
+                declarações e atestados, sem depender de sistemas reais da instituição.
+              </p>
+              <div class="story-highlights">
+                <div>
+                  <span>Problema</span>
+                  <strong>Fraude e alteração</strong>
+                </div>
+                <div>
+                  <span>Objetivo</span>
+                  <strong>Validar origem</strong>
+                </div>
+                <div>
+                  <span>Resultado</span>
+                  <strong>Confiança digital</strong>
+                </div>
+              </div>
+              <div class="cta-row">
+                <a class="button button-primary" href="../proto/index.html" target="_blank" rel="noreferrer">Abrir demonstração</a>
+                <button class="button button-secondary" type="button" data-next-slide>Próximo slide</button>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <img src="../proto/assets/aluns_with_computer.jpg" alt="Alunos usando computador na Fatec" />
+              <div class="member-box">
+                <span class="member-box__label">Integrantes</span>
+                <div class="member-box__list">
+                  <span>Leonardo Izaias</span>
+                  <span>Gustavo Pereira</span>
+                  <span>Cauã Vieira 🦉</span>
+                  <span>Breno Oliveira</span>
+                </div>
+              </div>
+              <div class="mini-metrics">
+                <div>
+                  <strong>Confidencialidade</strong>
+                  <span>AES-256-GCM</span>
+                </div>
+                <div>
+                  <strong>Integridade</strong>
+                  <span>SHA-256</span>
+                </div>
+                <div>
+                  <strong>Autenticidade</strong>
+                  <span>Assinatura digital</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="responsible-tag">Por todos os integrantes</div>
+        </section>
+
+        <section class="slide">
+          <div class="slide-content">
+            <span class="kicker">Contexto</span>
+            <h2>O problema é validar a origem sem expor o conteúdo</h2>
+            <div class="two-col">              <div class="card panel">
+                <h3>O que acontece hoje</h3>
+                <ul>
+                  <li>Documentos acadêmicos circulam em PDF, cópias e compartilhamentos digitais.</li>
+                  <li>Uma alteração simples pode alterar notas, matrículas ou datas.</li>
+                  <li>O verificador precisa confirmar se o documento foi emitido pela instituição.</li>
+                </ul>
+              </div>
+              <div class="card panel accent-panel">
+                <h3>O que a proposta resolve</h3>
+                <ul>
+                  <li>Criptografa o documento para preservar confidencialidade.</li>
+                  <li>Calcula hash para detectar qualquer adulteração.</li>
+                  <li>Aplica assinatura digital para comprovar autenticidade de origem.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="responsible-tag">Por Leonardo Izaias</div>
+        </section>
+
+        <section class="slide">
+          <div class="slide-content">
+            <span class="kicker">Requisitos</span>
+            <h2>Três propriedades centrais da solução</h2>
+            <div class="metrics-grid">
+              <article class="metric-card">
+                <div class="icon">01</div>
+                <h3>Confidencialidade</h3>
+                <p>Somente pessoas autorizadas devem ter acesso ao conteúdo sensível do documento acadêmico.</p>
+              </article>
+              <article class="metric-card">
+                <div class="icon">02</div>
+                <h3>Integridade</h3>
+                <p>Qualquer alteração em bits do arquivo deve resultar em falha de verificação.</p>
+              </article>
+              <article class="metric-card">
+                <div class="icon">03</div>
+                <h3>Autenticidade</h3>
+                <p>O receptor precisa ter certeza de que a instituição realmente emitiu o documento.</p>
+              </article>
+            </div>
+          </div>
+          <div class="responsible-tag">Por Leonardo Izaias</div>
+        </section>
+
+        <section class="slide">
+          <div class="slide-content">
+            <span class="kicker">Fundamentos</span>
+            <h2>Criptografia e gestão de chaves</h2>
+            <div class="stacked-panels">
+              <div class="panel card">
+                <h3>AES-256-GCM</h3>
+                <p>Protege o conteúdo com cifragem simétrica, além de autenticar o pacote. Qualquer mudança no texto cifrado é detectada.</p>
+              </div>
+              <div class="panel card">
+                <h3>SHA-256</h3>
+                <p>Gera um resumo criptográfico do documento. Esse hash é usado para detectar alterações e validar o arquivo apresentado.</p>
+              </div>
+              <div class="panel card">
+                <h3>Assinatura digital</h3>
+                <p>Com a chave privada institucional, a escola assina o hash do conteúdo. Com a chave pública, qualquer verificador confirma a origem.</p>
+              </div>
+            </div>
+          </div>
+          <div class="responsible-tag">Por Gustavo Pereira</div>
+        </section>
+
+        <section class="slide">
+          <div class="slide-content">
+            <span class="kicker">Arquitetura</span>
+            <h2>Fluxo operacional do SecureDocTec</h2>
+            <div class="flow-diagram">
+              <div class="flow-node">Titular</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">Secretaria</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">KMS</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">Repositório</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">Verificador</div>
+            </div>
+            <div class="three-col">
+              <div class="card">
+                <h3>1. Emissão</h3>
+                <p>Gerar hash, assinar o conteúdo e cifrar o documento com AES-GCM.</p>
+              </div>
+              <div class="card">
+                <h3>2. Armazenamento</h3>
+                <p>Guardar somente envelopes cifrados e metadados públicos, com chaves separadas em ambiente protegido.</p>
+              </div>
+              <div class="card">
+                <h3>3. Validação</h3>
+                <p>Recalcular o hash e verificar a assinatura com a chave pública institucional.</p>
+              </div>
+            </div>
+          </div>
+          <div class="responsible-tag">Por Cauã Vieira 🦉</div>
+        </section>
+
+        <section class="slide">
+          <div class="slide-content">
+            <span class="kicker">Segregação de funções</span>
+            <h2>Perfis e permissões</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Perfil</th>
+                    <th>Atua</th>
+                    <th>Limite</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Titular</td>
+                    <td>Solicita e acessa seus próprios documentos</td>
+                    <td>Não vê documentos de terceiros</td>
+                  </tr>
+                  <tr>
+                    <td>Secretaria</td>
+                    <td>Emite e assina documentos</td>
+                    <td>Não gerencia chaves privadas</td>
+                  </tr>
+                  <tr>
+                    <td>Verificador</td>
+                    <td>Valida documento apresentado</td>
+                    <td>Não acessa o repositório completo</td>
+                  </tr>
+                  <tr>
+                    <td>Custodiante de chaves</td>
+                    <td>Gerencia rotação e recuperação</td>
+                    <td>Não lê documentos</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="responsible-tag">Por Cauã Vieira 🦉</div>
+        </section>
+
+        <section class="slide">
+          <div class="slide-content">
+            <span class="kicker">Demonstração</span>
+            <h2>Fluxo de emissão, validação e adulteração</h2>
+            <div class="demo-grid">
+              <div class="demo-card valid">
+                <h3>Documento válido</h3>
+                <p>Hash e assinatura conferem.</p>
+                <span>STATUS: VÁLIDO</span>
+              </div>
+              <div class="demo-card invalid">
+                <h3>Documento adulterado</h3>
+                <p>Qualquer alteração muda o hash.</p>
+                <span>STATUS: REJEITADO</span>
+              </div>
+            </div>
+            <div class="cta-row center">
+              <a class="button button-primary" href="../proto/index.html" target="_blank" rel="noreferrer">Executar POC completa</a>
+            </div>
+          </div>
+          <div class="responsible-tag">Por Breno Oliveira</div>
+        </section>
+
+        <section class="slide">
+          <div class="slide-content">
+            <span class="kicker">Riscos</span>
+            <h2>Limitações e riscos residuais</h2>
+            <div class="three-col">
+              <div class="card">
+                <h3>Vazamento de chaves</h3>
+                <p>Se uma chave privada for comprometida, a autenticidade da instituição fica prejudicada.</p>
+              </div>
+              <div class="card">
+                <h3>Reuso de nonce</h3>
+                <p>Em AES-GCM, o nonce deve ser único por chave para manter a segurança do modo AEAD.</p>
+              </div>
+              <div class="card">
+                <h3>Governança</h3>
+                <p>Um sistema real exige políticas de acesso, auditoria, rotação e recuperação do KMS.</p>
+              </div>
+            </div>
+          </div>
+          <div class="responsible-tag">Por Breno Oliveira</div>
+        </section>
+
+        <section class="slide">
+          <div class="slide-content center-text">
+            <span class="kicker">Conclusão</span>
+            <h2>Uma solução segura exige camadas: criptografia, assinatura, controle de acesso e auditoria.</h2>
+            <p class="lead">
+              O SecureDocTec combina mecanismos criptográficos sólidos com uma arquitetura prudente. Isso torna a proposta convincente como estudo acadêmico e base para uma implementação real em ambiente institucional.
+            </p>
+            <div class="cta-row center">
+              <button class="button button-secondary" type="button" data-first-slide>Revisar introdução</button>
+              <a class="button button-primary" href="../proto/index.html" target="_blank" rel="noreferrer">Abrir o protótipo</a>
+            </div>
+          </div>
+          <div class="responsible-tag">Por todos os integrantes</div>
+        </section>
+      </main>
+
+      <footer class="deck-footer">
+        <button class="nav-button" id="prev-btn" type="button" aria-label="Slide anterior">Anterior</button>
+        <div class="progress-bar" aria-hidden="true">
+          <span id="progress-fill"></span>
+        </div>
+        <button class="nav-button primary" id="next-btn" type="button" aria-label="Próximo slide">Próximo</button>
+      </footer>
+    </div>
+  </body>
+</html>
